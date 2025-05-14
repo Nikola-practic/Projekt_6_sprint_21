@@ -85,14 +85,6 @@ class OrderPageScooter(BasePage):
     def wait_for_load_successful_order(self):
         self.wait_for_element(OrderPageLocators.PANEL_SUCCESSFUl_ORDER)
 
-    @allure.step('Ждём загрузки элемента')
-    def wait_for_load_element(self, locator):
-        self.wait_for_element(locator)
-
-    @allure.step('Скроллим до нужного элемента')
-    def scroll_to_element(self, locator):
-        self.scroll_into_view(locator)
-
     @allure.step('Проверяем отображение подтверждения успешного заказа')
     def successful_order_is_displayed(self):
         return self.panel_confirm_order_is_displayed(OrderPageLocators.PANEL_SUCCESSFUl_ORDER)
@@ -104,7 +96,3 @@ class OrderPageScooter(BasePage):
     @allure.step('Нажимаем на логотип "Яндекс"')
     def click_button_logo_yandex(self):
         self.click_element(OrderPageLocators.BUTTON_LOGO_YANDEX)
-
-    @allure.step('Получаем текущий адрес страницы')
-    def get_my_current_url(self):
-        self.get_current_url()

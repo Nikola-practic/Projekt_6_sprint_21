@@ -10,7 +10,7 @@ from pages.order_page import OrderPageScooter
 @pytest.fixture
 def driver():
     driver = webdriver.Firefox()
-    driver.set_window_size(1280, 820)
+    driver.set_window_size(1448, 1024)
     yield driver
     driver.quit()
 

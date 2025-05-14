@@ -20,7 +20,7 @@ class BasePage:
         return WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
 
     @allure.step('Подождать видимости элемента')
-    def wait_for_element(self, locator, timeout=30):
+    def wait_for_element(self, locator, timeout=25):
         return WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
 
     @allure.step('Скролл до элемента')
@@ -28,18 +28,12 @@ class BasePage:
         self.driver.execute_script("arguments[0].scrollIntoView()", locator)
 
     @allure.step('Кликнуть по элементу')
-    def click_element(self, locator, timeout=30):
+    def click_element(self, locator, timeout=10):
         element = self.wait_for_element(locator, timeout)
         element.click()
 
-    @allure.step("Ввести текст в поле ввода")
-    def send_keys_to_input(self, locator, keys, timeout=20):
-        element = self.wait_for_element(locator, timeout)
-        element.clear()
-        element.send_keys(keys)
-
     @allure.step("Получить текст элемента")
-    def get_text_on_element(self, locator, timeout=10):
+    def get_text_on_element(self, locator, timeout=30):
         element = self.wait_for_element(locator, timeout)
         return element.text
 
@@ -55,3 +49,4 @@ class BasePage:
             self.driver.switch_to.window(window_handles[1])
         else:
             raise Exception("Нет дополнительного окна для переключения")
+

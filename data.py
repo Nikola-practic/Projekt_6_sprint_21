@@ -1,36 +1,33 @@
 from locators.home_page_locators import HomePageLocators
 from locators.order_page_locators import OrderPageLocators
 
-order_data = [
-{
-    'first_name': 'Николай',
-    'second_name': 'Петров',
-    'address': 'Москва',
-    'metro_station': 'Тверская',
-    'metro_selection': OrderPageLocators.BUTTON_TVERSKAYA_STATE,
-    'phone_number': '+79012345678',
-    'delivery_date': '10.05.2025',
-    'date_selection': OrderPageLocators.SELECT_10_MAY_2025,
-    'rental_period': OrderPageLocators.OPTION_RENTAL_PERIOD_TWO_DAY,
-    'scooter_color': OrderPageLocators.CHECKBOX_BLACK_COLOR,
-    'courier_comment': 'Позвонить за 2 часа',
-    'location': 'nikpetrov'
-    },
-    {
-    'first_name': 'Иван',
-    'second_name': 'Сидоров',
-    'address': 'Москва',
-    'metro_station': 'Рижская',
-    'metro_selection': OrderPageLocators.BUTTON_RIZHSKAYA_STATE,
-    'phone_number': '+79991234567',
-    'delivery_date': '12.05.2025',
-    'date_selection': OrderPageLocators.SELECT_12_MAY_2025,
-    'rental_period': OrderPageLocators.OPTION_RENTAL_PERIOD_FOUR_DAY,
-    'scooter_color': OrderPageLocators.CHECKBOX_GREY_COLOR,
-    'courier_comment': 'Позвонить за сутки',
-    'location': 'ivansidorov'
-    }
-]
+
+class User1:
+    first_name = 'Николай'
+    second_name = 'Петров'
+    address = 'Москва'
+    metro_station = 'Тверская'
+    metro_selection = OrderPageLocators.BUTTON_TVERSKAYA_STATE
+    phone_number = '+79012345678'
+    delivery_date = '10.05.2025'
+    date_selection = OrderPageLocators.SELECT_10_MAY_2025
+    rental_period = OrderPageLocators.OPTION_RENTAL_PERIOD_TWO_DAY
+    scooter_color = OrderPageLocators.CHECKBOX_BLACK_COLOR
+    courier_comment = 'Позвонить за 2 часа'
+
+
+class User2:
+    first_name = 'Иван'
+    second_name = 'Сидоров'
+    address = 'Москва'
+    metro_station = 'Рижская'
+    metro_selection = OrderPageLocators.BUTTON_RIZHSKAYA_STATE
+    phone_number = '+79991234567'
+    delivery_date = '12.05.2025'
+    date_selection = OrderPageLocators.SELECT_12_MAY_2025
+    rental_period = OrderPageLocators.OPTION_RENTAL_PERIOD_FOUR_DAY
+    scooter_color = OrderPageLocators.CHECKBOX_GREY_COLOR
+    courier_comment = 'Позвонить за сутки'
 
 
 data_for_test_important_questions = [

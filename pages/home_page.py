@@ -51,14 +51,8 @@ class HomePageScooter(BasePage):
     def wait_for_load_info(self, locator):
         self.wait_for_element(locator)
 
-    @allure.step("Ждём загрузки элемента")
-    def wait_for_load_element(self, locator):
-        self.wait_for_element(locator)
-
     @allure.step("Получаем текст ответа на вопрос")
     def get_info_text(self, locator):
          return self.get_text_on_element(locator)
 
-    @allure.step("Получаем текущий адрес страницы")
-    def get_my_current_url(self):
-        self.get_current_url()
+

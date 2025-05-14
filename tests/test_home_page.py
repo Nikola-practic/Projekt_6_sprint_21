@@ -6,10 +6,8 @@ from data import data_for_test_important_questions
 
 class TestImportantQuestions:
     @allure.title('Проверка открытия соответствующего текста ответа на вопрос')
-    @pytest.mark.parametrize("button_locator, text_locator, expected_text",
-                             data_for_test_important_questions)
-    def test_open_and_check_text(self, driver, open_home_page, button_locator, text_locator,
-                                 expected_text):
+    @pytest.mark.parametrize("button_locator, text_locator, expected_text", data_for_test_important_questions)
+    def test_open_and_check_text(self, driver, button_locator, text_locator, expected_text, open_home_page):
         # Создаём объект класса
         home_page = HomePageScooter(driver)
 
